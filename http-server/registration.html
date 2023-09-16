@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regiration Form</title>
+    <style>
+        .regi-container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #user-form{
+            background-color: white;
+            height: max-content;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px gray;
+            padding: 10px 30px;
+            box-sizing: border-box;
+        }
+        #user-form h2{
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .form-table{
+            margin: 10px 0px;
+        }        
+        input{
+            margin-top: 20px;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 6px;
+            border: 0px solid;
+            background-color: hwb(0 100% 8%);
+            margin-bottom: 10px;
+        }
+        .in{
+            width: 375px;
+        }
+        #submit-btn{
+            background-color: green;
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+            border: 0px solid;
+            width: 120px;
+            margin-top: 15px;
+        }  
+        .Entries-warp{
+            margin: 50px auto 0px auto;
+            background-color: white;
+            width: max-content;
+            border-radius: 10px;
+            padding: 10px;
+            border: 2px solid slateblue;
+            background-color: rgba(250, 235, 215, 0.6);
+        }
+        .Entries-title{
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 4px;
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div class="regi-container">
+        <form action="" id="user-form">
+            <h2>Registration Form</h2>
+            <table class="form-table">
+                <tr>
+                    <td><label for="name">Name</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="name", id="name" required placeholder="Enter your full name" class="in"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email ID</label></td>
+                </tr>
+                <tr>
+                    <td><input type="email" name="email", id="email" required placeholder="Enter your email Id" class="in"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="password", id="password" required placeholder="Enter your password" class="in"></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of Birth</label></td>
+                </tr>
+                <tr>
+                    <td><input type="date" name="dod", id="dob" required min="1968-08-08" max="2005-08-08" class="in"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="checkbox" name="terms", id="terms" required>
+                    <label for="terms">Accept Terms & Conditions</label></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" id="submit-btn">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+        <div class= "Entries-warp">
+            <h2 class="Entries-title">ENTRIES</h2>
+            <div id="user-entries"></div>
+        </div>
+        <script src="./reg.js"></script>
+    </div>
+</body>
+</html>
